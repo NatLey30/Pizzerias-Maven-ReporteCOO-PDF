@@ -61,8 +61,8 @@ def load(porciones_ingredientes):
     for ingrediente in porciones_ingredientes:
         comprar.loc[i] = (str(ingrediente), porciones_ingredientes[ingrediente])
         i += 1
-    comprar.to_csv('compra_semanal.csv')
-    comprar.to_xml('compra_semanal.xml')
+    comprar.to_csv('compra_semanal.csv', index=False)
+    comprar.to_xml('compra_semanal.xml', index=False)
 
 
 if "__main__" == __name__:
