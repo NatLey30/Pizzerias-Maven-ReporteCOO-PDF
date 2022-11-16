@@ -33,6 +33,7 @@ def transfrom(detalles, pizzas, ingredientes, orders):
         pedidos_semana.append(orders.loc[h, 'order_id'])
         h -= 1
     pedidos_semana.pop(len(pedidos_semana)-1)
+    semana.pop(len(semana)-1)
     # Cogemos las pizzas pedidad esa semana
     pizzas_pedidas = {}
     for order in range(len(detalles.axes[0])):
