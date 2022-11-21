@@ -52,7 +52,7 @@ if "__main__" == __name__:
     mensaje += """</table>"""
 
     df1 = pd.read_csv('compra_semanal.csv')
-    df2 = pd.read_csv('order_details.csv')
+    df2 = pd.read_csv('order_details_ordenado.csv')
     df3 = pd.read_csv('pizzas.csv')
 
     # Creamos gráficos

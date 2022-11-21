@@ -6,10 +6,10 @@ def extract():
     '''
     Extraemos todos los dataframes
     '''
-    detalles = pd.read_csv("order_details.csv", sep=',')
+    detalles = pd.read_csv("order_details_ordenado.csv", sep=',')
     pizzas = pd.read_csv("pizzas.csv", sep=',')
     ingredientes = pd.read_csv("pizza_types.csv", sep=',', encoding='unicode-escape')
-    orders = pd.read_csv("orders.csv", sep=',')
+    orders = pd.read_csv("orders_ordenado.csv", sep=',')
     return detalles, pizzas, ingredientes, orders
 
 
@@ -26,8 +26,9 @@ def transfrom(detalles, pizzas, ingredientes, orders):
     h = len(orders.axes[0])-1
     fecha = ""
     while contador <= 7:
-        if str(orders.loc[h, 'date']) != fecha:
-            fecha = str(orders.loc[h, 'date'])
+        dia = str(orders.loc[h, 'dates_std']).split(' ')[0]
+        if dia != fecha:
+            fecha = dia        
             semana.append(fecha)
             contador += 1
         pedidos_semana.append(orders.loc[h, 'order_id'])
