@@ -22,3 +22,14 @@ Los archivos de transformación son:
 - limpiar_datos.py
 - compra.py
 - reporte.py.py
+
+Librerías
+- pandas
+- re
+- dateutil.parser
+- datetime
+- word2number
+- webbrowser
+- matplotlib.pyplot
+- seaborn
+- xhtml2pdf
